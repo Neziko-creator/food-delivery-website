@@ -1,1 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery — Доставка еды</title>
 
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf5;
+            color: #292929;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: white;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #f36b35;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 25px;
+        }
+
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 80px 8%;
+            gap: 30px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #f36b35;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #777;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .button {
+            display: inline-block;
+            background: #f36b35;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        .food-picture {
+            font-size: 150px;
+            background: #ffe3d2;
+            border-radius: 50%;
+            padding: 35px;
+        }
+
+        .menu {
+            padding: 50px 8%;
+            text-align: center;
+        }
+
+        .menu h2 {
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            width: 220px;
+            box-shadow: 0 4px 15px #00000010;
+        }
+
+        .card .emoji {
+            font-size: 65px;
+        }
+
+        .card h3 {
+            margin: 15px 0;
+        }
+
+        .price {
+            color: #f36b35;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        footer {
+            background: #292929;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .food-picture {
+                font-size: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">FoodDelivery 🍊</div>
+
+        <nav>
+            <a href="#">Главная</a>
+            <a href="#menu">Меню</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h1>Вкусная еда <span>уже рядом!</span></h1>
+
+            <p>
+                Заказывайте любимые блюда прямо домой.
+                Быстро, удобно и очень вкусно!
+            </p>
+
+            <a href="#menu" class="button">Посмотреть меню</a>
+        </div>
+
+        <div class="food-picture">🍕</div>
+    </section>
+
+    <section class="menu" id="menu">
+        <h2>Популярные блюда</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <div class="emoji">🍔</div>
+                <h3>Бургер</h3>
+                <p>Сочный бургер с сыром</p>
+                <div class="price">350 сом</div>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🍕</div>
+                <h3>Пицца</h3>
+                <p>Пицца с сыром и томатами</p>
+                <div class="price">550 сом</div>
+            </div>
+
+            <div class="card">
+                <div class="emoji">🍣</div>
+                <h3>Суши</h3>
+                <p>Свежие роллы</p>
+                <div class="price">450 сом</div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contacts">
+        <p>© 2026 FoodDelivery. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
