@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Delivery — Доставка еды</title>
+    <title>FoodTime — доставка еды</title>
 
     <style>
         * {
@@ -27,9 +27,9 @@
         }
 
         .logo {
-            font-size: 26px;
+            font-size: 27px;
             font-weight: bold;
-            color: #f36b35;
+            color: #ff6b35;
         }
 
         nav a {
@@ -39,11 +39,12 @@
         }
 
         .hero {
+            padding: 90px 8%;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            padding: 80px 8%;
-            gap: 30px;
+            justify-content: space-between;
+            background: #ffe8d8;
+            min-height: 400px;
         }
 
         .hero h1 {
@@ -51,102 +52,69 @@
             margin-bottom: 20px;
         }
 
-        .hero h1 span {
-            color: #f36b35;
-        }
-
         .hero p {
             font-size: 18px;
-            color: #777;
-            margin-bottom: 30px;
-            line-height: 1.6;
+            margin-bottom: 25px;
         }
 
-        .button {
-            display: inline-block;
-            background: #f36b35;
+        .hero button {
+            background: #ff6b35;
             color: white;
+            border: none;
             padding: 15px 30px;
-            border-radius: 30px;
-            text-decoration: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
         }
 
-        .food-picture {
+        .food-image {
             font-size: 150px;
-            background: #ffe3d2;
-            border-radius: 50%;
-            padding: 35px;
         }
 
         .menu {
             padding: 50px 8%;
-            text-align: center;
         }
 
         .menu h2 {
             font-size: 32px;
-            margin-bottom: 35px;
+            margin-bottom: 30px;
         }
 
         .cards {
             display: flex;
-            justify-content: center;
             gap: 25px;
             flex-wrap: wrap;
         }
 
         .card {
             background: white;
-            padding: 30px;
-            border-radius: 20px;
+            padding: 25px;
+            border-radius: 18px;
             width: 220px;
+            text-align: center;
             box-shadow: 0 4px 15px #00000010;
         }
 
-        .card .emoji {
+        .card .food {
             font-size: 65px;
+            margin-bottom: 15px;
         }
 
         .card h3 {
-            margin: 15px 0;
+            margin-bottom: 10px;
         }
 
         .price {
-            color: #f36b35;
+            color: #ff6b35;
             font-weight: bold;
             margin-top: 12px;
         }
 
         footer {
+            text-align: center;
+            padding: 30px;
             background: #292929;
             color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 50px;
-        }
-
-        @media (max-width: 700px) {
-            header {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
-
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .hero h1 {
-                font-size: 36px;
-            }
-
-            .food-picture {
-                font-size: 100px;
-            }
         }
     </style>
 </head>
@@ -154,7 +122,7 @@
 <body>
 
     <header>
-        <div class="logo">FoodDelivery 🍊</div>
+        <div class="logo">FoodTime 🍔</div>
 
         <nav>
             <a href="#">Главная</a>
@@ -165,17 +133,14 @@
 
     <section class="hero">
         <div>
-            <h1>Вкусная еда <span>уже рядом!</span></h1>
-
-            <p>
-                Заказывайте любимые блюда прямо домой.
-                Быстро, удобно и очень вкусно!
-            </p>
-
-            <a href="#menu" class="button">Посмотреть меню</a>
+            <h1>Вкусная еда<br>уже рядом!</h1>
+            <p>Заказывай любимые блюда с быстрой доставкой.</p>
+            <button onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+                Посмотреть меню
+            </button>
         </div>
 
-        <div class="food-picture">🍕</div>
+        <div class="food-image">🍕</div>
     </section>
 
     <section class="menu" id="menu">
@@ -184,31 +149,38 @@
         <div class="cards">
 
             <div class="card">
-                <div class="emoji">🍔</div>
+                <div class="food">🍔</div>
                 <h3>Бургер</h3>
                 <p>Сочный бургер с сыром</p>
                 <div class="price">350 сом</div>
             </div>
 
             <div class="card">
-                <div class="emoji">🍕</div>
+                <div class="food">🍕</div>
                 <h3>Пицца</h3>
-                <p>Пицца с сыром и томатами</p>
+                <p>Пицца с моцареллой</p>
                 <div class="price">550 сом</div>
             </div>
 
             <div class="card">
-                <div class="emoji">🍣</div>
+                <div class="food">🍣</div>
                 <h3>Суши</h3>
                 <p>Свежие роллы</p>
                 <div class="price">450 сом</div>
+            </div>
+
+            <div class="card">
+                <div class="food">🍰</div>
+                <h3>Десерт</h3>
+                <p>Сладкое настроение</p>
+                <div class="price">200 сом</div>
             </div>
 
         </div>
     </section>
 
     <footer id="contacts">
-        <p>© 2026 FoodDelivery. Все права защищены.</p>
+        <p>FoodTime © 2026 | Доставка вкусной еды</p>
     </footer>
 
 </body>
