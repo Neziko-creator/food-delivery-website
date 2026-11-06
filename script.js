@@ -41,6 +41,7 @@ function updateCart() {
 
     cartCounter.textContent = count;
     panelCounter.textContent = count;
+    document.getElementById("cart-badge").textContent = count;
     cartTotal.textContent = total + " сом";
 
     if (count === 0) {
@@ -111,4 +112,8 @@ document.getElementById("clear-cart").addEventListener("click", () => {
     }
 
     updateCart();
+});
+// Открыть корзину круглой кнопкой
+document.getElementById("cart-toggle").addEventListener("click", () => {
+    cartPanel.classList.add("is-open");
 });
