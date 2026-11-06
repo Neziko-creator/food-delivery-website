@@ -29,24 +29,31 @@
         </a>
 
     </header>
-<!-- ВЫПАДАЮЩАЯ КОРЗИНА -->
-    <aside class="cart-panel" id="cart-panel">
+<aside class="cart-panel" id="cart-panel">
 
-        <div class="cart-heading">
-            <h2>Твоя корзина 🛒</h2>
+    <div class="cart-heading">
+        <h2>Твоя корзина 🛒</h2>
+
+        <div class="cart-heading-actions">
             <span id="cart-panel-count">0</span>
+            <button id="close-cart" class="close-cart">×</button>
         </div>
+    </div>
 
-        <div id="cart-items">
-            <p class="empty-cart">Пока здесь пусто. Выбери что-нибудь вкусное!</p>
-        </div>
+    <div id="cart-items">
+        <p class="empty-cart">Пока здесь пусто. Выбери что-нибудь вкусное!</p>
+    </div>
 
-        <div class="cart-total">
-            <span>Итого:</span>
-            <strong id="cart-total">0 сом</strong>
-        </div>
+    <div class="cart-total">
+        <span>Итого:</span>
+        <strong id="cart-total">0 сом</strong>
+    </div>
 
-    </aside>
+    <button id="clear-cart" class="clear-cart">
+        Очистить корзину
+    </button>
+
+</aside>
     <!-- Главный экран -->
     <main>
 
