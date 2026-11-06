@@ -52,3 +52,59 @@ nav a:hover {
     border-radius: 25px;
     cursor: pointer;
 }
+/* Главный экран */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 80px 10%;
+    min-height: 450px;
+
+    background-color: #fff0e5;
+    gap: 40px;
+}
+
+/* Блок с текстом */
+.hero-content {
+    max-width: 550px;
+}
+
+/* Главный заголовок */
+.hero-content h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    color: #292929;
+    margin-bottom: 25px;
+}
+
+/* Описание */
+.hero-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+/* Кнопка заказа */
+.order-btn {
+    background-color: #ff6b35;
+    color: white;
+
+    padding: 16px 32px;
+    border: none;
+    border-radius: 30px;
+
+    font-size: 17px;
+    cursor: pointer;
+}
+
+/* Эффект при наведении */
+.order-btn:hover {
+    background-color: #e95725;
+}
+
+/* Изображение */
+.hero-image {
+    font-size: 170px;
+}
