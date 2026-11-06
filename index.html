@@ -3,55 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FoodTime</title>
+    <title>Krusty Krab — Ресторан</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- Шапка сайта -->
-    <header>
+    <header class="site-header">
 
-        <div class="logo">
-            FoodTime
-        </div>
+        <a href="#home" class="logo">
+            KRUSTY <span>KRAB</span>
+        </a>
 
-        <nav>
-            <a href="#">Главная</a>
-            <a href="#">Меню</a>
-            <a href="#">О нас</a>
-            <a href="#">Контакты</a>
+        <nav class="main-nav">
+            <a href="#home">Главная</a>
+            <a href="#menu">Меню</a>
+            <a href="#about">О ресторане</a>
+            <a href="#contacts">Контакты</a>
         </nav>
 
-        <div class="cart">
-            🛒 Корзина
-        </div>
+        <a href="#cart" class="cart-link">
+            🛒 Корзина <span>0</span>
+        </a>
 
     </header>
-<!-- Главный экран сайта -->
-<section class="hero">
 
-    <div class="hero-content">
+    <!-- Главный экран -->
+    <main>
 
-        <h1>
-            Доставка любимой еды прямо к тебе!
-        </h1>
+        <section class="hero" id="home">
 
-        <p>
-            Выбирай любимые блюда и наслаждайся вкусом.
-            Мы доставим их быстро и с заботой!
-        </p>
+            <div class="hero-content">
 
-        <button class="order-btn">
-            Заказать сейчас
-        </button>
+                <p class="eyebrow">Ресторан из Бикини Боттом</p>
 
-    </div>
+                <h1>
+                    Легендарный вкус
+                    <span>Крабсбургера</span>
+                </h1>
 
-    <div class="hero-image">
-        🍔
-    </div>
+                <p class="hero-description">
+                    Добро пожаловать в Красти Краб!
+                    Попробуй знаменитый крабсбургер
+                    и окунись в атмосферу подводного мира.
+                </p>
 
-</section>
+                <a href="#menu" class="hero-button">
+                    Смотреть меню
+                </a>
+
+            </div>
+
+            <div class="hero-visual">
+                <img
+                    src="hero-krusty-krab.jpg"
+                    alt="Крабсбургер ресторана Красти Краб"
+                >
+            </div>
+
+        </section>
+
+    </main>
+
 </body>
 </html>
