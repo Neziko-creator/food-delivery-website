@@ -1,110 +1,71 @@
-/* Общие настройки */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Krusty Krab — Ресторан</title>
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #fffaf5;
-}
+    <link rel="stylesheet" href="style.css">
+</head>
 
-/* Шапка сайта */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-}
+<body>
 
-/* Логотип */
-.logo {
-    font-size: 28px;
-    font-weight: bold;
-    color: #ff6b35;
-}
+    <!-- Шапка сайта -->
+    <header class="site-header">
 
-/* Навигация */
-nav {
-    display: flex;
-    gap: 30px;
-}
+        <a href="#home" class="logo">
+            KRUSTY <span>KRAB</span>
+        </a>
 
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-}
+        <nav class="main-nav">
+            <a href="#home">Главная</a>
+            <a href="#menu">Меню</a>
+            <a href="#about">О ресторане</a>
+            <a href="#contacts">Контакты</a>
+        </nav>
 
-/* Наведение на ссылки */
-nav a:hover {
-    color: #ff6b35;
-}
+        <a href="#cart" class="cart-link">
+            🛒 Корзина <span>0</span>
+        </a>
 
-/* Корзина */
-.cart {
-    background-color: #ff6b35;
-    color: white;
-    padding: 12px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-}
-/* Главный экран */
-.hero {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    </header>
 
-    padding: 80px 10%;
-    min-height: 450px;
+    <!-- Главный экран -->
+    <main>
 
-    background-color: #fff0e5;
-    gap: 40px;
-}
+        <section class="hero" id="home">
 
-/* Блок с текстом */
-.hero-content {
-    max-width: 550px;
-}
+            <div class="hero-content">
 
-/* Главный заголовок */
-.hero-content h1 {
-    font-size: 46px;
-    line-height: 1.2;
-    color: #292929;
-    margin-bottom: 25px;
-}
+                <p class="eyebrow">Ресторан из Бикини Боттом</p>
 
-/* Описание */
-.hero-content p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666666;
-    margin-bottom: 30px;
-}
+                <h1>
+                    Легендарный вкус
+                    <span>Крабсбургера</span>
+                </h1>
 
-/* Кнопка заказа */
-.order-btn {
-    background-color: #ff6b35;
-    color: white;
+                <p class="hero-description">
+                    Добро пожаловать в Красти Краб!
+                    Попробуй знаменитый крабсбургер
+                    и окунись в атмосферу подводного мира.
+                </p>
 
-    padding: 16px 32px;
-    border: none;
-    border-radius: 30px;
+                <a href="#menu" class="hero-button">
+                    Смотреть меню
+                </a>
 
-    font-size: 17px;
-    cursor: pointer;
-}
+            </div>
 
-/* Эффект при наведении */
-.order-btn:hover {
-    background-color: #e95725;
-}
+            <div class="hero-visual">
+                <img
+                    src="hero-krusty-krab.jpg"
+                    alt="Крабсбургер ресторана Красти Краб"
+                >
+            </div>
 
-/* Изображение */
-.hero-image {
-    font-size: 170px;
-}
+        </section>
+
+    </main>
+
+</body>
+</html>
