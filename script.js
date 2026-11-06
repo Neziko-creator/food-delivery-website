@@ -99,3 +99,16 @@ cartItems.addEventListener("click", event => {
 
     updateCart();
 });
+// Закрыть корзину крестиком
+document.getElementById("close-cart").addEventListener("click", () => {
+    cartPanel.classList.remove("is-open");
+});
+
+// Очистить всю корзину
+document.getElementById("clear-cart").addEventListener("click", () => {
+    for (const name in cart) {
+        delete cart[name];
+    }
+
+    updateCart();
+});
