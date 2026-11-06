@@ -1,71 +1,184 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Krusty Krab — Ресторан</title>
+/* ===== ОСНОВНЫЕ НАСТРОЙКИ ===== */
 
-    <link rel="stylesheet" href="style.css">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
+html {
+    scroll-behavior: smooth;
+}
 
-    <!-- Шапка сайта -->
-    <header class="site-header">
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f2e9;
+    color: #123f50;
+}
 
-        <a href="#home" class="logo">
-            KRUSTY <span>KRAB</span>
-        </a>
+/* ===== ШАПКА САЙТА ===== */
 
-        <nav class="main-nav">
-            <a href="#home">Главная</a>
-            <a href="#menu">Меню</a>
-            <a href="#about">О ресторане</a>
-            <a href="#contacts">Контакты</a>
-        </nav>
+.site-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 22px 8%;
+    background-color: #123f50;
+    gap: 30px;
+}
 
-        <a href="#cart" class="cart-link">
-            🛒 Корзина <span>0</span>
-        </a>
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
 
-    </header>
+.logo span {
+    color: #63c7c9;
+}
 
-    <!-- Главный экран -->
-    <main>
+.main-nav {
+    display: flex;
+    gap: 30px;
+}
 
-        <section class="hero" id="home">
+.main-nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+}
 
-            <div class="hero-content">
+.main-nav a:hover {
+    color: #63c7c9;
+}
 
-                <p class="eyebrow">Ресторан из Бикини Боттом</p>
+.cart-link {
+    background-color: #e96a3a;
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 14px;
+}
 
-                <h1>
-                    Легендарный вкус
-                    <span>Крабсбургера</span>
-                </h1>
+.cart-link:hover {
+    background-color: #f5b942;
+    color: #123f50;
+}
 
-                <p class="hero-description">
-                    Добро пожаловать в Красти Краб!
-                    Попробуй знаменитый крабсбургер
-                    и окунись в атмосферу подводного мира.
-                </p>
+/* ===== ГЛАВНЫЙ ЭКРАН ===== */
 
-                <a href="#menu" class="hero-button">
-                    Смотреть меню
-                </a>
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    padding: 75px 8%;
+    min-height: 570px;
+    background: linear-gradient(
+        120deg,
+        #123f50,
+        #176879
+    );
+    color: white;
+}
 
-            </div>
+.hero-content {
+    max-width: 520px;
+}
 
-            <div class="hero-visual">
-                <img
-                    src="hero-krusty-krab.jpg"
-                    alt="Крабсбургер ресторана Красти Краб"
-                >
-            </div>
+.eyebrow {
+    color: #63c7c9;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 22px;
+}
 
-        </section>
+.hero-content h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
 
-    </main>
+.hero-content h1 span {
+    color: #f5b942;
+}
 
-</body>
-</html>
+.hero-description {
+    color: #d6e8e8;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.hero-button {
+    display: inline-block;
+    background-color: #e96a3a;
+    color: white;
+    text-decoration: none;
+    padding: 16px 30px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #f5b942;
+    color: #123f50;
+    transform: translateY(-3px);
+}
+
+/* ===== ИЗОБРАЖЕНИЕ ===== */
+
+.hero-visual {
+    flex: 1;
+    max-width: 570px;
+}
+
+.hero-visual img {
+    display: block;
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== АДАПТАЦИЯ ДЛЯ ТЕЛЕФОНОВ ===== */
+
+@media (max-width: 768px) {
+
+    .site-header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .main-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-visual {
+        width: 100%;
+    }
+
+    .hero-visual img {
+        height: auto;
+    }
+}
